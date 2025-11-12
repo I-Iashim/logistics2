@@ -1,0 +1,557 @@
+.overview-section {
+    margin: 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.overviewPart1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 400px;
+    gap: 30px;
+    width: 100%;
+    transform: translateX(80px);
+    animation: slideInFromLeft 1.5s ease;
+}
+
+.overviewHeading h2 {
+    font-size: 35px;
+    color: #ff5722;
+    font-weight: 700;
+}
+
+.overviewBackground {
+    display: flex;
+    align-items: center;
+    max-width: 250px;
+    height: 500px;
+    background-color: #ff5e13;
+    /* Background color for the area */
+}
+
+.overview-section .imageBackground {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    /* Ensure it appears above the background if needed */
+    transform: translateX(-100px);
+    /* Original position */
+    animation: slideInFromRight 1.5s ease;
+    /* Animation: name, duration, easing */
+}
+
+.imageBackground img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.overviewContent div {
+    display: flex;
+    gap: 30px;
+}
+
+/* Style the list numbers */
+.overview-section .overviewContent strong {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Optional: Style the paragraphs or other elements if needed */
+.overview-section .overviewContent p {
+    align-content: end;
+    font-size: 18px;
+    margin: 0;
+    /* Remove default margins for better control */
+}
+
+.overview-section .overviewContent hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    /* Light gray for separators */
+    margin: 14px 0 14px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-section {
+    padding: 60px 20px;
+    padding-right: 0;
+    font-family: Arial, sans-serif;
+}
+
+.services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1400px;
+    /* wider section */
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* LEFT SIDE - back to original text sizes */
+.services-left h2 {
+    color: #ff5722;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.service-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.service-box .num {
+    background: #ff5722;
+    color: white;
+    padding: 15px 22px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 15px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 20% 50%, 0% 0%);
+
+}
+
+.service-text h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service-text p {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    max-width: 320px;
+}
+
+/* RIGHT IMAGE - Larger now */
+.services-right {
+    flex: 1.6;
+    /* More width for image */
+    position: relative;
+    min-width: 350px;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 520px;
+    /* Increased height */
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 6% 50%);
+
+    background: #ff5722;
+    padding: 25px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 6% 50%);
+
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 15pc;
+}
+
+
+
+
+
+
+/* ===== ANIMATIONS ===== */
+.services-left,
+.services-right {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.services-left.show,
+.services-right.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Make left slide from left & image from right */
+.services-left {
+    transform: translateX(-60px);
+}
+
+.services-right {
+    transform: translateX(60px);
+}
+
+.services-left.show {
+    transform: translateX(0);
+}
+
+.services-right.show {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comprehensiveServicesSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 0 80px 8%;
+    background-color: #ffffff;
+    /* Dark background for contrast */
+    color: #000000;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* LEFT TEXT SIDE */
+.comprehensivePart1 {
+    flex: 1 1 50%;
+    max-width: 380px;
+}
+
+.comprehensivePart1 h2 {
+    color: #ff5722;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.comprehensivePart1 h4 {
+    color: #ff5722;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.comprehensivePart1 p {
+    color: #000000;
+    max-width: 350px;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+/* RIGHT IMAGE SIDE */
+.comprehensivePart2 {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprehensivePart2 img {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    box-shadow: 0 0 40px rgba(255, 87, 34, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    clip-path: polygon(0% 4%, 2% 4%, 2% 2%, 98% 2%, 98% 4%, 100% 4%, 100% 98%, 98% 98%, 98% 100%, 2% 100%, 2% 98%, 0% 98%);
+
+
+
+}
+
+
+
+
+
+/* Animation base styles */
+.revealLeft, .revealRight {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.revealLeft {
+  transform: translateX(-80px);
+}
+
+.revealRight {
+  transform: translateX(80px);
+}
+
+/* When element is visible */
+.revealLeft.active,
+.revealRight.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* === ANIMATION BASE === */
+.revealLeft, .revealRight {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.revealLeft { transform: translateX(-80px); }
+.revealRight { transform: translateX(80px); }
+
+.revealLeft.active,
+.revealRight.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* === GLOWING HEADINGS === */
+.comprehensivePart1 h2 {
+  color: #ff5722;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  position: relative;
+  animation: textGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,87,34,0.3); }
+  to { text-shadow: 0 0 25px rgba(255,87,34,0.8); }
+}
+
+/* === GLOWING IMAGE EFFECT === */
+.comprehensivePart2 img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 0 30px rgba(255,87,34,0.4);
+  position: relative;
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 25px rgba(255,87,34,0.3), 0 0 40px rgba(255,87,34,0.2);
+  }
+  to {
+    box-shadow: 0 0 50px rgba(255,87,34,0.6), 0 0 70px rgba(255,87,34,0.4);
+  }
+}
+
+/* Hover interaction */
+.comprehensivePart2 img:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .comprehensiveServicesSection {
+    flex-direction: column;
+    text-align: center;
+  }
+  .comprehensivePart2 img {
+    margin-top: 30px;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .comprehensiveServicesSection {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .comprehensivePart1,
+    .comprehensivePart2 {
+        flex: 1 1 100%;
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive adjustments */
+@media(max-width: 900px) {
+    .services-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .img-box {
+        display: none;
+    }
+}
+
+/* Keyframe Animation for Sliding In */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-100px);
+        /* End at original position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(80px);
+        /* End at original position */
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .overview-section {
+        flex-direction: column;
+        /* Stack list and image vertically */
+        align-items: center;
+        /* Center align items */
+        padding-left: 10px;
+        /* Reduce padding for smaller screens */
+        margin: 100px 0;
+        /* Reduce margin */
+    }
+
+    .overviewPart1 {
+        max-width: 100%;
+        /* Full width on small screens */
+        transform: translateX(0);
+        /* Remove horizontal shift */
+        gap: 20px;
+        /* Reduce gap */
+        align-items: center;
+        /* Center the list items */
+    }
+
+    .overviewHeading h2 {
+        font-size: 28px;
+        /* Smaller font for mobile */
+        text-align: center;
+        /* Center the heading */
+    }
+
+    .overviewContent div {
+        gap: 15px;
+        /* Reduce gap in list items */
+    }
+
+    .overviewContent strong {
+        font-size: 18px;
+        /* Smaller numbers */
+    }
+
+    .overviewContent p {
+        font-size: 16px;
+        /* Smaller text */
+    }
+
+    .overviewContent hr {
+        margin: 10px 0;
+        /* Reduce margin */
+    }
+
+    /* Hide the image section entirely */
+    .overviewPart2,
+    .overviewBackground,
+    .imageBackground {
+        display: none;
+        /* Remove image on screens 768px and below */
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-section {
+        padding-left: 5px;
+        /* Even less padding */
+        margin: 80px 0;
+        /* Further reduce margin */
+    }
+
+    .overviewPart1 {
+        gap: 15px;
+        /* Tighter spacing */
+    }
+
+    .overviewHeading h2 {
+        font-size: 24px;
+        /* Even smaller heading */
+    }
+
+    .overviewContent strong {
+        font-size: 16px;
+        /* Smaller numbers */
+    }
+
+    .overviewContent p {
+        font-size: 14px;
+        /* Smaller text */
+    }
+}
